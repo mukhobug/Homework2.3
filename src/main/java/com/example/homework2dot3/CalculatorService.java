@@ -9,52 +9,23 @@ public class CalculatorService {
         return "Добро пожаловать в калькулятор";
     }
 
-    public String plus(String num1, String num2) {
-        if (num1 != null && num2 != null) {
-            int numA = Integer.parseInt(num1);
-            int numB = Integer.parseInt(num2);
-            int sum = numA + numB;
-            return num1 + " + " + num2 + " = " + sum;
-        } else {
-            return "недостаточно аргументов";
-        }
+    public boolean checkNull(Integer num1, Integer num2) {
+        return num1 == null || num2 == null;
     }
 
-    public String minus(String num1, String num2) {
-        if (num1 != null && num2 != null) {
-            int numA = Integer.parseInt(num1);
-            int numB = Integer.parseInt(num2);
-            int sum = numA - numB;
-            return num1 + " - " + num2 + " = " + sum;
-        } else {
-            return "недостаточно аргументов";
-        }
+    public Integer plus(Integer num1, Integer num2) {
+        return num1 + num2;
     }
 
-    public String multiply(String num1, String num2) {
-        if (num1 != null && num2 != null) {
-            int numA = Integer.parseInt(num1);
-            int numB = Integer.parseInt(num2);
-            int sum = numA * numB;
-            return num1 + " * " + num2 + " = " + sum;
-        } else {
-            return "недостаточно аргументов";
-        }
+    public Integer minus(Integer num1, Integer num2) {
+        return num1 - num2;
     }
 
-    public String divide(String num1, String num2) {
-        if (num1 != null && num2 != null) {
-            int numA = Integer.parseInt(num1);
-            int numB = Integer.parseInt(num2);
-            int sum;
-            if (numB != 0) {
-                sum = numA / numB;
-            } else {
-                return "Делить на ноль нельзя";
-            }
-            return num1 + " / " + num2 + " = " + sum;
-        } else {
-            return "недостаточно аргументов";
-        }
+    public Integer multiply(Integer num1, Integer num2) {
+        return num1 * num2;
+    }
+
+    public Integer divide(Integer num1, Integer num2) {
+        return num1 / num2;
     }
 }
